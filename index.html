@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bike Price Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; margin: 0; padding: 0; }
+        .header { background-color: #222; color: white; padding: 20px 0; text-align: center; }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, button { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #28a745; color: white; font-weight: bold; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        .footer { text-align: center; padding: 20px; background-color: #eee; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Bike Price Prediction</h1>
+    <p>Estimate the market price of your bike based on specifications</p>
+</div>
+
+<div class="container">
+    <h2>Enter Bike Details</h2>
+    <form action="/predict" method="post">
+        <label for="brand">Brand</label>
+        <select id="brand" name="brand">
+            <option value="Yamaha">Yamaha</option>
+            <option value="Honda">Honda</option>
+            <option value="Bajaj">Bajaj</option>
+            <option value="TVS">TVS</option>
+            <option value="Royal Enfield">Royal Enfield</option>
+            <option value="Hero">Hero</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="KTM">KTM</option>
+        </select>
+
+        <label for="engine">Engine Capacity (CC)</label>
+        <input type="number" id="engine" name="engine" min="50" max="500">
+
+        <label for="mileage">Mileage (km/l)</label>
+        <input type="number" id="mileage" name="mileage" min="20" max="100">
+
+        <label for="age">Bike Age (Years)</label>
+        <input type="number" id="age" name="age" min="0" max="20">
+
+        <button type="submit">Predict Price</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Bike Price Prediction. All rights reserved.</p>
+</div>
+
+</body>
+</html>
